@@ -1,0 +1,47 @@
+
+		<div class="container">
+			<div class="row">
+				<h1>いちらん</h1>
+				<div class="col-md-6 col-6">
+					<% @posts.each do |post| %>
+					<%= link_to post_path(post) do %>
+					<div class="card-img-top"><%= attachment_image_tag post, :shop_image, fallback: "no_image1.png" %></div>
+				</div>
+				<% end %>
+				<div class="row">
+				   <div class="col-md-4 col-4">
+				   	 <h3>name</h3>
+					 <%= post.user_name%>
+				   </div>
+
+				   <div class="col-md-4 col-4">
+				   	 <h3>shopname</h3>
+					 <%= post.shop_name %>
+				   </div>
+					<div class="card-text">
+						<%= post.caption %>
+					</div>
+					<ul class="inline-meta">
+						<li>By
+						    <%= post.user_name %>
+						</li>
+						<li>
+						    <%= link_to "#{post.post_comments.count} コメント", post_path(post.id) %>
+						</li>
+						</ul>
+				  </div>
+			    </div>
+				<% end %>
+			</div>
+		</div>
+
+<style>
+.container{
+	background-color: yellow;
+	justify-content: center;
+}
+.card-img-top{
+	width: 300px;
+	height: 200px;	
+}
+</style>

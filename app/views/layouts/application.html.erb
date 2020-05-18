@@ -1,15 +1,30 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Veggie</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+  <html>
+    <head>
+      <title>Veggie</title>
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+   <div class="container">
+    <div class="row">
+          <body>
+            <%= link_to root_path, class: "navbar-item" do %>
+            <h1>Tokyo Veggie Navi</h1>
+            <% end %>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+            <p class="control">
+              <%= link_to "ログイン",  new_user_session_path %>
+              <%= link_to "新規登録",  new_user_registration_path %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            </p>
+            <%= yield %>
+          </body>
+    </html>
+  </div>
+</div>
+
+
+
