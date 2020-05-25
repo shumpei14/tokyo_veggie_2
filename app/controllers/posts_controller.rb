@@ -10,8 +10,11 @@ class PostsController < ApplicationController
     def create
     	@post = Post.new(post_params)
     	@post.user_id = current_user.id
-    	@post.save!
+    if	@post.save!
     	redirect_to posts_path
+    else
+    	render :new
+    end
     end
     def show
     	@post = Post.find(params[:id])
@@ -22,6 +25,6 @@ class PostsController < ApplicationController
     end
      private
     def post_params
-        params.require(:post).permit(:shop_name, :shop_image, :remove_shop_image, :caption, :shop_address, :user_id, :user_name, :post_coments)
+        params.require(:post).permit(:shop_name, :shop_image, :caption, :shop_address, :user_id, :user_name, :post_coments)
     end
 end
