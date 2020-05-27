@@ -1,33 +1,31 @@
 
-		<div class="box container">
-			<div class=justify-content: center;>
-				<h1>いちらん</h1>
-					<% @posts.each do |post| %>
-					<%= link_to post_path(post) do %>
-					<div class="card-img-top">
-						<%= link_to post_path(post.id) do %>
-						 <%= attachment_image_tag post, :shop_image, fallback: "no_image1.png" %></div>
+<div class="jumbotron">
+	  <h1 class="display-4">投稿一覧</h1>
+	  <p class="lead">post </p>
+	  　<% @posts.each do |post| %>
+	　　　<%= link_to post_path(post) do %>
+		  <hr class="my-4">
+		  <p><%= link_to post_path(post.id) do %>
+			   <%= attachment_image_tag post, :shop_image, fallback: "no_image1.png", :size =>'420x370' %>
+			   <% end %>
+			  <% end %>
+		　</p>
+		  <p>name-<%= post.user_name%></p>
+		   <hr class="my-4">
+		  <p>store -<%= post.shop_name %></p>
+		   <hr class="my-4">
+		  	<p>説明<%= post.caption %></p>
+		  	 <hr class="my-4">
+			<ul>
+				<li>By
+				    <%= post.user_name %>
+				</li>
 
-				         <% end %>
-				        <% end %>
-				   	 <h3>name</h3>
-					 <%= post.user_name%>
-				   	 <h3>shopname</h3>
-					 <%= post.shop_name %>
-						<%= post.caption %>
-					<ul class="inline-meta">
-						<li>By
-						    <%= post.user_name %>
-						</li>
-						<li>
-						    <%= link_to "#{post.post_comments.count} コメント", post_path(post.id) %>
-						</li>
-						</ul>
-				<% end %>
-			</div>
-		</div>
-<style>
-.box{
-	background-color:#AAAAAA
-}
-</style>
+				<li>
+				    <%= link_to "#{post.post_comments.count} コメント", post_path(post.id) %>
+				</li>
+			</ul>
+		  <% end %>
+	</div>
+</div>
+

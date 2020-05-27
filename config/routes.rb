@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'explain/index' => 'explain#index'
   get 'explain/famous' => 'explain#famous'
   get 'explain/environment' => 'explain#environment'
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: 'devise/users/omniauth_callbacks' }
   resources :posts, only: [:new, :edit, :index, :show, :create] do
   	resource :favorites, only: [:create, :destroy]
     resources :post_comments, only: [:create, :destroy]
