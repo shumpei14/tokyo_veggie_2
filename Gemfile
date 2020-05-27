@@ -74,6 +74,9 @@ gem 'dotenv-rails'
 gem 'kaminari','~> 1.1.1'
 gem 'carrierwave'
 gem 'dotenv-rails'
+gem 'geocoder'
 group :production do
   gem 'mysql2'
 end
+gem 'omniauth'
+gem 'omniauth-facebook'
