@@ -65,7 +65,11 @@
 				    </div>
 				    <%= f.submit "送信する", class: "btn btn-lg btn-base-1 mt-20 pull-right" %>
 				<% end %>
-				<h2>gmap</h2>
+			</div>
+		</div>
+	</div>
+</div>
+<h2>gmap</h2>
 				<div id='map'></div>
 
 				<style>
@@ -87,10 +91,6 @@
 					}
 					</script>
 					<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['google_api_key'] %>&callback=initMap" async defer></script>
-			</div>
-		</div>
-	</div>
-</div>
 
 
 
