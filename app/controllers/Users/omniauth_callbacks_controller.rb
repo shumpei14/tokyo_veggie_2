@@ -29,7 +29,7 @@ def facebook
 
   # The path used when OmniAuth fails
   # def after_omniauth_failure_path_for(scope)
-   private
+  private
 
   def callback_from(provider)
     provider = provider.to_s
