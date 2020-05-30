@@ -95,4 +95,16 @@ body {
   transform: translate(-50%,-50%);
   margin:0;
   padding:0;
+
+}
+.footer {
+position: absolute;
+bottom: 0;
+width: 100%;
+/* Set the fixed height of the footer here */
+height: 60px;
+background-color: #00FF7F ;
+}
+.text-muted {
+margin: 20px 0;
 }
