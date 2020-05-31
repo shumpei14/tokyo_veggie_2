@@ -13,14 +13,14 @@
           <div id="carouselControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
-                <a href='posts'><img class="d-block w-100" src="IMG_2554.jpg" alt="First slide"　width="1000" height="400">
+                <a href='posts'><%= image_tag 'IMG_2554.jpg',:size =>'1000x400' %>
                   <p class="post-1">投稿一覧</p></a>
             </div>
             <div class="carousel-item">
-              <a href='posts/new'><img class="d-block w-100" src="img34.jpg" alt="Second slide"　width="1000" height="400"><p class="post-2">お店を投稿する</p></a>
+              <a href='posts/new'><%= image_tag 'sks.jpg',:size =>'1000x400' %><p class="post-2">お店を投稿する</p></a>
             </div>
             <div class="carousel-item">　
-              <img class="d-block w-100" src="yasai (1).jpg" alt="Third slide"　width="1000" height="400">
+             <%= image_tag 'bull.jpg',:size =>'1000x400' %>
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
@@ -40,15 +40,15 @@
                 </div>
               　<div class="row">
                 <div class="col-md-4 col-12">
-                  <a href='explain/index'><img class="img-fluid" src="IMG_2231.jpg" alt="">
+                  <a href='explain/index'><div class="img-fluid"><%= image_tag 'IMG_2231.jpg',:size =>'320x480' %></div>
                   <p class="vegan">ベジタリアンやビーガンの違いなど</p></a>
                 </div>
                 <div class="col-md-4 col-12">
-                  <a href='explain/famous'><img class="img-fluid" src="img_112.jpg" alt="">
+                  <a href='explain/famous'><div class="img-fluid"><%= image_tag 'img_112.jpg',:size =>'320x480' %></div>
                   <p class="famous">ベジタリアンの有名人</p></a>
                 </div>
                 <div class="col-md-4 col-12">
-                  <a href='explain/environment'><img class="img-fluid" src="IMG_2231.jpg" alt="">
+                  <a href='explain/environment'><div class="img-fluid"><%= image_tag 'unnamed.jpg',:size =>'320x480' %></div>
                     <p class="environment">環境問題について</p></a>
                 </div>
               </div>
